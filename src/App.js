@@ -36,6 +36,18 @@ function App() {
     return <Login onLogin={handleLogin}/>
   };
 
+  return(
+    <div>
+      <Menu onNavigate={handleNavigate} onCreate={showCreateForm} />
+      <main className='content'>
+        {activeScreen === "Welcome" && <Welcome />}
+        {activeScreen === "list" && <ContactList contacts={contacts} onEdit={startEdit} onDelete={handleDeleteContact}/>}
+        {activeScreen === "form" && <ContactForm contactToEdit={contactToEdit} onSave={handleSaveContact} />}
+       
+      </main>
+    </div>
+  )
+
 }
 
 export default App;
