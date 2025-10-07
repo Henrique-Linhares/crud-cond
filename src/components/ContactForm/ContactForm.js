@@ -1,7 +1,7 @@
 import React from 'react'
 import "./ContactForm.css";
 
-const ContactForm = ({contactToEdit, onSave}) => {
+function ContactForm({contactToEdit, onSave}){
   return (
     <div>
 

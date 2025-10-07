@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Login.css";
 
 
-export function Login( {onLogin} ) {
+function Login( {onLogin} ) {
 
     // Variáveis de estado
     const [ userName, setUserName ] = useState("");
@@ -45,3 +45,5 @@ export function Login( {onLogin} ) {
         </div>
     )
 }
+
+export default Login;

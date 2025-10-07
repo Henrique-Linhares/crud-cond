@@ -1,7 +1,6 @@
 import React from 'react'
 import "./Welcome.css"
-
-const Welcome = () => {
+function Welcome(){
   return (
     <div className='welcome-container'>
         <h1>Bem-vindo a sua agenda</h1>
