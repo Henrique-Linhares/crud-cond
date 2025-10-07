@@ -6,22 +6,23 @@ function ContactList({ contacts, onEdit, onDelete }) {
     <div className="list-container">
       <h2>Lista de Contato</h2>
       {contacts.lenght > 0 ? (
-        <ul>
+        <ul className="contact-list">
           {contacts.map((contact) => (
-            <li key={contact.id}>
-              <div>
-                <span>{contact.name}</span>
-                <span>{contact.phone}</span>
+            <li key={contact.id} className="contact-item">
+              <div className="contact-info">
+                <span className="contact-name">{contact.name}</span>
+                <span className="contact-phone">{contact.phone}</span>
               </div>
-              <div>
+              <div className="contact-actions">
                 <button
+                className="edit-btn"
                   onClick={() => {
                     onEdit(contact);
                   }}
                 >
                   Alterar
                 </button>
-                <button
+                <button className="delete-btn"
                   onClick={() => {
                     onDelete(contact.id);
                   }}
@@ -33,7 +34,7 @@ function ContactList({ contacts, onEdit, onDelete }) {
           ))}
         </ul>
       ) : (
-        <p>Nenhum contato cadastrado.</p>
+        <p className="no-contacts">Nenhum contato cadastrado.</p>
       )}
     </div>
   );
