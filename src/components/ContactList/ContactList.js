@@ -5,9 +5,9 @@ function ContactList({ contacts, onEdit, onDelete }) {
   return (
     <div className="list-container">
       <h2>Lista de Contato</h2>
-      {contacts.lenght > 0 ? (
+      {contacts.length > 0 ? (
         <ul className="contact-list">
-          {contacts.map((contact) => (
+          {contacts.map(contact => (
             <li key={contact.id} className="contact-item">
               <div className="contact-info">
                 <span className="contact-name">{contact.name}</span>
@@ -16,16 +16,12 @@ function ContactList({ contacts, onEdit, onDelete }) {
               <div className="contact-actions">
                 <button
                 className="edit-btn"
-                  onClick={() => {
-                    onEdit(contact);
-                  }}
+                  onClick={() => onEdit(contact)}
                 >
                   Alterar
                 </button>
                 <button className="delete-btn"
-                  onClick={() => {
-                    onDelete(contact.id);
-                  }}
+                  onClick={() => onDelete(contact.id)}
                 >
                   Deletar
                 </button>

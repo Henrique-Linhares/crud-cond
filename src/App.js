@@ -69,7 +69,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="app-container">
       <Menu onNavigate={handleNavigate} onCreate={showCreateForm} />
       <main className="content">
         {activeScreen === "Welcome" && <Welcome />}
@@ -78,14 +78,11 @@ function App() {
             contacts={contacts}
             onEdit={startEdit}
             onDelete={handleDeleteContact}
-          />
-        )}
+          />)}
         {activeScreen === "form" && (
           <ContactForm
             contactToEdit={contactToEdit}
-            onSave={handleSaveContact}
-          />
-        )}
+            onSave={handleSaveContact}/>)}
       </main>
     </div>
   );

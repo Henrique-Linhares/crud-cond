@@ -9,10 +9,7 @@ function Menu({ onNavigate, onCreate }) {
         <li>
           <button
             className="menu-button"
-            onClick={() => {
-              onCreate();
-            }}
-          >
+            onClick={() => onCreate()}>
             Cadastrar Contato
           </button>
         </li>
@@ -22,8 +19,7 @@ function Menu({ onNavigate, onCreate }) {
             onClick={(e) => {
               e.preventDefault();
               onNavigate("list");
-            }}
-          >
+            }}>
             Lista de Contatos
           </a>
         </li>
@@ -32,10 +28,21 @@ function Menu({ onNavigate, onCreate }) {
             href="#"
             onClick={(e) => {
               e.preventDefault();
-              onNavigate("welcome");
+              onNavigate("Welcome");
             }}
           >
             Página Inicial
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate("logout");
+            }}
+          >
+           Sair
           </a>
         </li>
       </ul>
